@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Datos</title>
+</head>
+<body>
+    <h1>Datos de la Base de Datos</h1>
+    <ul id="datos"></ul>
+
+    <script>
+        // Abrir la base de datos
+        var request = indexedDB.open("MusiCCA");
+
+        request.onerror = function(event) {
+            console.log("Error al abrir la base de datos");
+        };
+
+        request.onsuccess = function(event) {
+            var db = event.target.result;
+            var transaction = db.transaction(["mi_tabla"], "readonly");
+            var objectStore = transaction.objectStore("mi_tabla");
+            var datosElement = document.getElementById("datos");
+
+            objectStore.openCursor().onsuccess = function(event) {
+                var cursor = event.target.result;
+                if (cursor) {
+                    var li = document.createElement("li");
+                    li.textContent = "ID: " + cursor.key + ", Nombre: " + cursor.value.nombre;
+                    datosElement.appendChild(li);
+                    cursor.continue();
+                }
+            };
+        };
+    </script>
+</body>
+</html>
+

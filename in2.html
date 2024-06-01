@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundFly</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Slidebar content -->
+        <div class="content">
+            <!-- Top content -->
+            <div class="top-content">
+                <!-- Trending section -->
+                <div class="trending">
+                    <!-- Left side of trending section -->
+                    <div class="left">
+                        <p class="type">Trending</p>
+                        <p class="title">Eleven</p>
+                        <p class="artist">Khalid ft. Summer</p>
+                        <p class="view">7.3 Million listens</p>
+                        <a href="#" class="btn-play">Play Now</a>
+                    </div>
+                    <!-- Right side of trending section -->
+                    <div class="right">
+                        <img src="./images/avatar.jpg" alt="">
+                        Rahman Nayan
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom content -->
+            <div class="bottom-content">
+                <div class="playlist">
+                    <div class="left-side">
+                        <!-- Left side top content -->
+                        <div class="left-side-top">
+                            <div class="top-albums-title">
+                                <span>Top Albums</span>
+                                <span>See all</span>
+                            </div>
+                            <div class="top-albums">
+                                <!-- Sample album card -->
+                                <div class="card-albums">
+                                    <img src="https://i.scdn.co/image/ab67616d0000b273f429549123dbe8552764ba1d" alt="">
+                                    <p>Kodaline</p>
+                                </div>
+                                <!-- Add more album cards here using provided album image URLs -->
+                            </div>
+                        </div>
+                        <!-- Left side bottom content -->
+                        <div class="left-side-bottom">
+                            <!-- Left bottom left content -->
+                            <div class="left">
+                                <div class="genres-table-title">
+                                    <span>Genres</span>
+                                    <span>See all</span>
+                                </div>
+                                <div class="genres-table">
+                                    <!-- Sample genre -->
+                                    <span class="grid-item">Pop</span>
+                                    <!-- Add more genres here -->
+                                </div>
+                            </div>
+                            <!-- Left bottom right content -->
+                            <div class="right">
+                                <p>Top Songs</p>
+                                <div class="songs">
+                                    <!-- Sample song -->
+                                    <div class="song">
+                                        <img src="https://i.scdn.co/image/ab67616d0000b273f429549123dbe8552764ba1d" alt="" class="song-img">
+                                        <div class="song-title">
+                                            <span>Tootey Khab</span>
+                                            <span>Amaan Malik</span>
+                                        </div>
+                                        <span class="song-time">
+                                            3.56 min
+                                        </span>
+                                        <a href="#" class="btn-song-play">
+                                            <i class="far fa-play-circle"></i>
+                                        </a>
+                                    </div>
+                                    <!-- Add more songs here using provided song image URLs -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right side of playlist -->
+                    <div class="right-side">
+                        <p class="adp-card-title">Now Playing</p>
+                        <div class="audio-player">
+                            <img src="https://i.scdn.co/image/ab67616d0000b273f429549123dbe8552764ba1d" alt="" class="adp-img" id="image">
+                            <div class="adp-title">
+                                <p id="title">Love Like This</p>
+                                <p>In a Perfect World</p>
+                                <p>Kodaline</p>
+                            </div>
+                        </div>
+                        <div class="adp-action">
+                            <a href="#" id="previous" onclick="previousSong()"><i class="fas fa-backward"></i></a>
+                            <a href="#" id="play" onclick="justPlay()"><i class="fas fa-play"></i></a>
+                            <a href="#" id="next" onclick="nextSong()"><i class="fas fa-forward"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
